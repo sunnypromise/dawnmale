@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>封装常见自定义hooks | Icon Blog</title>
+    <meta name="generator" content="VuePress 1.9.7">
+    
+    <meta name="description" content="前端/日记本">
+    
+    <link rel="preload" href="/dawnmale/assets/css/0.styles.4c784c7e.css" as="style"><link rel="preload" href="/dawnmale/assets/js/app.3c882026.js" as="script"><link rel="preload" href="/dawnmale/assets/js/2.0e425a6e.js" as="script"><link rel="preload" href="/dawnmale/assets/js/35.db865bbb.js" as="script"><link rel="prefetch" href="/dawnmale/assets/js/10.bee762a4.js"><link rel="prefetch" href="/dawnmale/assets/js/11.8bc0dd33.js"><link rel="prefetch" href="/dawnmale/assets/js/12.7be86e04.js"><link rel="prefetch" href="/dawnmale/assets/js/13.265bdd9b.js"><link rel="prefetch" href="/dawnmale/assets/js/14.44d73f13.js"><link rel="prefetch" href="/dawnmale/assets/js/15.b9a45666.js"><link rel="prefetch" href="/dawnmale/assets/js/16.0755f07d.js"><link rel="prefetch" href="/dawnmale/assets/js/17.33001f71.js"><link rel="prefetch" href="/dawnmale/assets/js/18.8a3cc7c5.js"><link rel="prefetch" href="/dawnmale/assets/js/19.6f3f3dbe.js"><link rel="prefetch" href="/dawnmale/assets/js/20.bcf8fe14.js"><link rel="prefetch" href="/dawnmale/assets/js/21.e57953c8.js"><link rel="prefetch" href="/dawnmale/assets/js/22.fbe99c13.js"><link rel="prefetch" href="/dawnmale/assets/js/23.4e862394.js"><link rel="prefetch" href="/dawnmale/assets/js/24.39a1cb19.js"><link rel="prefetch" href="/dawnmale/assets/js/25.778d28d4.js"><link rel="prefetch" href="/dawnmale/assets/js/26.bd1eb31b.js"><link rel="prefetch" href="/dawnmale/assets/js/27.70831c43.js"><link rel="prefetch" href="/dawnmale/assets/js/28.1196db0b.js"><link rel="prefetch" href="/dawnmale/assets/js/29.41c12cf2.js"><link rel="prefetch" href="/dawnmale/assets/js/3.7f511d6a.js"><link rel="prefetch" href="/dawnmale/assets/js/30.2ca26388.js"><link rel="prefetch" href="/dawnmale/assets/js/31.2b1845bc.js"><link rel="prefetch" href="/dawnmale/assets/js/32.4b93116b.js"><link rel="prefetch" href="/dawnmale/assets/js/33.9b4d53b9.js"><link rel="prefetch" href="/dawnmale/assets/js/34.864ffa9d.js"><link rel="prefetch" href="/dawnmale/assets/js/36.b075d6b3.js"><link rel="prefetch" href="/dawnmale/assets/js/37.8b27d055.js"><link rel="prefetch" href="/dawnmale/assets/js/38.a0b46e93.js"><link rel="prefetch" href="/dawnmale/assets/js/39.91a991e4.js"><link rel="prefetch" href="/dawnmale/assets/js/4.f3273c70.js"><link rel="prefetch" href="/dawnmale/assets/js/40.af643527.js"><link rel="prefetch" href="/dawnmale/assets/js/41.d374fd9b.js"><link rel="prefetch" href="/dawnmale/assets/js/5.1799c046.js"><link rel="prefetch" href="/dawnmale/assets/js/6.df608ef0.js"><link rel="prefetch" href="/dawnmale/assets/js/7.9f53959f.js"><link rel="prefetch" href="/dawnmale/assets/js/8.7b96d280.js"><link rel="prefetch" href="/dawnmale/assets/js/9.49851e77.js">
+    <link rel="stylesheet" href="/dawnmale/assets/css/0.styles.4c784c7e.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/dawnmale/" class="home-link router-link-active"><!----> <span class="site-name">Icon Blog</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/dawnmale/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><a href="/dawnmale/Contactme/code.html" class="nav-link">
+  联系我
+</a></div><div class="nav-item"><a href="/dawnmale/designPatterns/all.html" class="nav-link">
+  设计模式
+</a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/dawnmale/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><a href="/dawnmale/Contactme/code.html" class="nav-link">
+  联系我
+</a></div><div class="nav-item"><a href="/dawnmale/designPatterns/all.html" class="nav-link">
+  设计模式
+</a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>JS</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>REACT</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>VUE2</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>VUE3</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/dawnmale/vue3/vue3Frist.html" class="sidebar-link">vue3初体验</a></li><li><a href="/dawnmale/vue3/slots.html" class="sidebar-link">插槽</a></li><li><a href="/dawnmale/vue3/theme-elementplus.html" class="sidebar-link">vite vue3 element-plus 一键切换主题</a></li><li><a href="/dawnmale/vue3/transfervalue.html" class="sidebar-link">vue3组件之间传值</a></li><li><a href="/dawnmale/vue3/computed.html" class="sidebar-link">计算属性</a></li><li><a href="/dawnmale/vue3/watch.html" class="sidebar-link">watch</a></li><li><a href="/dawnmale/vue3/hooks.html" aria-current="page" class="active sidebar-link">封装常见自定义hooks</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/dawnmale/vue3/hooks.html#usepage" class="sidebar-link">usePage</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/dawnmale/vue3/hooks.html#resetobjtoprimitivetype" class="sidebar-link">resetObjToPrimitiveType</a></li><li class="sidebar-sub-header"><a href="/dawnmale/vue3/hooks.html#组件内使用" class="sidebar-link">组件内使用</a></li></ul></li></ul></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>ES6</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>AXIOS</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>NEXTJS</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>常见js手写</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>WEBPACK</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>面试题</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>ANTD</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>vscodeplugin</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>微前端</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>uniapp</span> <span class="arrow right"></span></p> <!----></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="封装常见自定义hooks"><a href="#封装常见自定义hooks" class="header-anchor">#</a> 封装常见自定义hooks</h1> <h2 id="usepage"><a href="#usepage" class="header-anchor">#</a> usePage</h2> <div class="language-js line-numbers-mode"><pre class="language-js"><code>    <span class="token keyword">import</span> <span class="token punctuation">{</span> reactive<span class="token punctuation">,</span> ref <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'vue'</span>
+    <span class="token comment">// 一个用于重置对象字段为原始值的函数</span>
+    <span class="token keyword">import</span> <span class="token punctuation">{</span> resetObjToPrimitiveType <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'@/utils/tool'</span>
+
+    <span class="token comment">/**
+     * @description usePage 接收一个 opts 参数，返回列表所需数据
+     * @param {Object} opts.searchForm - 默认查询参数
+     * @param {Function} opts.getListApi  - 获取列表数据的接口
+     * @param {Function} opts.customQueryParameters  - 自定义查询参数
+     * @param {Function} opts.getListFunc  - 执行完 getList 成功后执行的逻辑 有一个opts参数
+     * @param {Function} opts.resetFunc  - 执行完 reset 后执行的逻辑
+     * @param {Function} opts.sizeChangeFunc  - 执行完 sizeChange 后执行的逻辑
+     * @param {Function} opts.currentChangeFunc  - 执行完 currentChange 后执行的逻辑
+     */</span>
+    <span class="token keyword">export</span> <span class="token keyword">const</span> <span class="token function-variable function">usePage</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">opts</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    <span class="token comment">// searchForm 由外部传入，内部传入导出的数据无法推导类型即无法知道对象里有什么也会失去代码提示</span>
+    <span class="token keyword">const</span> <span class="token punctuation">{</span>
+        searchForm <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+        getListApi<span class="token punctuation">,</span>
+        <span class="token function-variable function">customQueryParameters</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token function-variable function">getListFunc</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">opts</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token function-variable function">resetFunc</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token function-variable function">sizeChangeFunc</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token function-variable function">currentChangeFunc</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+    <span class="token punctuation">}</span> <span class="token operator">=</span> opts
+
+    <span class="token keyword">const</span> <span class="token function-variable function">reset</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+        Object<span class="token punctuation">.</span><span class="token function">assign</span><span class="token punctuation">(</span>searchForm<span class="token punctuation">,</span> <span class="token function">resetObjToPrimitiveType</span><span class="token punctuation">(</span>searchForm<span class="token punctuation">)</span><span class="token punctuation">)</span>
+        <span class="token function">resetFunc</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+        <span class="token function">handleCurrentChange</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">const</span> page <span class="token operator">=</span> <span class="token function">reactive</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+        <span class="token literal-property property">pageSize</span><span class="token operator">:</span> <span class="token number">10</span><span class="token punctuation">,</span>
+        <span class="token literal-property property">pageNo</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+        <span class="token literal-property property">total</span><span class="token operator">:</span> <span class="token number">0</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+    <span class="token keyword">const</span> tableData <span class="token operator">=</span> <span class="token function">ref</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+    <span class="token keyword">const</span> <span class="token function-variable function">getList</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+        <span class="token keyword">const</span> opts <span class="token operator">=</span> <span class="token punctuation">{</span>
+        <span class="token operator">...</span>page<span class="token punctuation">,</span>
+        <span class="token operator">...</span>searchForm<span class="token punctuation">,</span>
+        <span class="token operator">...</span><span class="token function">customQueryParameters</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+        <span class="token punctuation">}</span>
+
+        <span class="token function">getListApi</span><span class="token punctuation">(</span>opts<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">res</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>res<span class="token punctuation">.</span>code <span class="token operator">===</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            tableData<span class="token punctuation">.</span>value <span class="token operator">=</span> res<span class="token punctuation">.</span>data<span class="token operator">?.</span>rows <span class="token operator">||</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+            page<span class="token punctuation">.</span>total <span class="token operator">=</span> res<span class="token punctuation">.</span>data<span class="token operator">?.</span>total <span class="token operator">||</span> <span class="token number">0</span>
+
+            <span class="token function">getListFunc</span><span class="token punctuation">(</span>opts<span class="token punctuation">)</span>
+        <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">const</span> <span class="token function-variable function">handleSizeChange</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">size</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+        page<span class="token punctuation">.</span>pageSize <span class="token operator">=</span> size
+        <span class="token function">sizeChangeFunc</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+        <span class="token function">getList</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">const</span> <span class="token function-variable function">handleCurrentChange</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">cur</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+        page<span class="token punctuation">.</span>pageNo <span class="token operator">=</span> cur
+        <span class="token function">currentChangeFunc</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+        <span class="token function">getList</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">return</span> <span class="token punctuation">{</span>
+        searchForm<span class="token punctuation">,</span>
+        reset<span class="token punctuation">,</span>
+        page<span class="token punctuation">,</span>
+        tableData<span class="token punctuation">,</span>
+        handleSizeChange<span class="token punctuation">,</span>
+        handleCurrentChange
+    <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br><span class="line-number">47</span><br><span class="line-number">48</span><br><span class="line-number">49</span><br><span class="line-number">50</span><br><span class="line-number">51</span><br><span class="line-number">52</span><br><span class="line-number">53</span><br><span class="line-number">54</span><br><span class="line-number">55</span><br><span class="line-number">56</span><br><span class="line-number">57</span><br><span class="line-number">58</span><br><span class="line-number">59</span><br><span class="line-number">60</span><br><span class="line-number">61</span><br><span class="line-number">62</span><br><span class="line-number">63</span><br><span class="line-number">64</span><br><span class="line-number">65</span><br><span class="line-number">66</span><br><span class="line-number">67</span><br><span class="line-number">68</span><br><span class="line-number">69</span><br><span class="line-number">70</span><br><span class="line-number">71</span><br><span class="line-number">72</span><br><span class="line-number">73</span><br><span class="line-number">74</span><br><span class="line-number">75</span><br><span class="line-number">76</span><br><span class="line-number">77</span><br></div></div><h3 id="resetobjtoprimitivetype"><a href="#resetobjtoprimitivetype" class="header-anchor">#</a> resetObjToPrimitiveType</h3> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token comment">// 重置对象数据为基本数据类型</span>
+ <span class="token comment">// 数字、数组、对象、其余重置为空字符串</span>
+ <span class="token keyword">export</span> <span class="token keyword">const</span> <span class="token function-variable function">resetObjToPrimitiveType</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">data</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+     <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>data<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+         <span class="token keyword">return</span> data
+     <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+         Object<span class="token punctuation">.</span><span class="token function">keys</span><span class="token punctuation">(</span>data<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">item</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+         <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token keyword">typeof</span> data<span class="token punctuation">[</span>item<span class="token punctuation">]</span> <span class="token operator">===</span> <span class="token string">'number'</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+             data<span class="token punctuation">[</span>item<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token number">0</span>
+             <span class="token keyword">return</span>
+         <span class="token punctuation">}</span>
+
+         <span class="token keyword">if</span> <span class="token punctuation">(</span>Array<span class="token punctuation">.</span><span class="token function">isArray</span><span class="token punctuation">(</span>data<span class="token punctuation">[</span>item<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+             data<span class="token punctuation">[</span>item<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+             <span class="token keyword">return</span>
+         <span class="token punctuation">}</span>
+
+         <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token class-name">Object</span><span class="token punctuation">.</span>prototype<span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">.</span><span class="token function">call</span><span class="token punctuation">(</span>data<span class="token punctuation">[</span>item<span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token operator">===</span> <span class="token string">'[object Object]'</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+             data<span class="token punctuation">[</span>item<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token function">resetObjToPrimitiveType</span><span class="token punctuation">(</span>data<span class="token punctuation">[</span>item<span class="token punctuation">]</span><span class="token punctuation">)</span>
+         <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+             data<span class="token punctuation">[</span>item<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token string">''</span>
+         <span class="token punctuation">}</span>
+         <span class="token punctuation">}</span><span class="token punctuation">)</span>
+         <span class="token keyword">return</span> data
+       <span class="token punctuation">}</span>
+     <span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br></div></div><h3 id="组件内使用"><a href="#组件内使用" class="header-anchor">#</a> 组件内使用</h3> <div class="language-js line-numbers-mode"><pre class="language-js"><code>        <span class="token keyword">import</span> <span class="token punctuation">{</span> reactive<span class="token punctuation">,</span> ref<span class="token punctuation">,</span> computed <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'vue'</span>
+        <span class="token keyword">import</span> <span class="token punctuation">{</span> usePage <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'@/composables/usePage'</span>
+        <span class="token keyword">import</span> testModel <span class="token keyword">from</span> <span class="token string">'@/model/test'</span>
+
+        <span class="token comment">// 查询参数</span>
+        <span class="token keyword">const</span> searchForm <span class="token operator">=</span> <span class="token function">reactive</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+        <span class="token literal-property property">createEndTime</span><span class="token operator">:</span> <span class="token string">''</span><span class="token punctuation">,</span>
+        <span class="token literal-property property">createStartTime</span><span class="token operator">:</span> <span class="token string">''</span>
+        <span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+        <span class="token comment">// 接收 查询参数、获取列表的接口 返回 列表所需要的数据、分页参数、分页函数等</span>
+        <span class="token keyword">const</span> <span class="token punctuation">{</span> reset<span class="token punctuation">,</span> page<span class="token punctuation">,</span> tableData<span class="token punctuation">,</span> handleSizeChange<span class="token punctuation">,</span> handleCurrentChange <span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token function">usePage</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+        searchForm<span class="token punctuation">,</span>
+        <span class="token literal-property property">getListApi</span><span class="token operator">:</span> testModel<span class="token punctuation">.</span>getList
+        <span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+        <span class="token comment">// 首次获取数据使用 reset方式即可 tableData 的数据自动更新</span>
+        <span class="token function">reset</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br></div></div></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/dawnmale/vue3/watch.html" class="prev">
+        watch
+      </a></span> <span class="next"><a href="/dawnmale/essix/list.html">
+        常用es6小技巧
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/dawnmale/assets/js/app.3c882026.js" defer></script><script src="/dawnmale/assets/js/2.0e425a6e.js" defer></script><script src="/dawnmale/assets/js/35.db865bbb.js" defer></script>
+  </body>
+</html>
